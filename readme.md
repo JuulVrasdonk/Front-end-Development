@@ -69,11 +69,11 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 ## Intake (week 1)
 -uitwerken voor de kick-off werkgroep - begin van de eerste week-
 
-**Je startniveau:** -zwart-
+**Je startniveau:** Zwarte Piste
 
-**Je focus:** -Mijn aandacht gaat naar de surface plane. Ik zal mijn website ook wel Responsive maken. Als ik toch bezig ben. XD-
+**Je focus:** Mijn aandacht gaat naar de surface plane. Ik zal mijn website ook wel Responsive maken. Als ik toch bezig ben. XD
 
-**Je opdracht:** -Ik wil een website gaan maken waarbij ik middels animatie een kort verhaal vertel. Ik weet niet nog precies waar het verhaal over zal gaan. Ik wil voor de animatie's JS library's gaan gebruiken als anime.js en GSAP. -
+**Je opdracht:** Ik wil een website gaan maken waarbij ik middels animatie een kort verhaal vertel. Ik weet niet nog precies waar het verhaal over zal gaan. Ik wil voor de animatie's JS library's gaan gebruiken als anime.js en GSAP. 
 
 **Screenshot(s) van de eerste pagina (small screen):**
 
