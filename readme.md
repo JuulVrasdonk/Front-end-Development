@@ -67,8 +67,6 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 
 ## Intake (week 1)
--uitwerken voor de kick-off werkgroep - begin van de eerste week-
-
 **Je startniveau:** Zwarte Piste
 
 **Je focus:** Mijn aandacht gaat naar de surface plane. Ik zal mijn website ook wel Responsive maken. Als ik toch bezig ben. XD
