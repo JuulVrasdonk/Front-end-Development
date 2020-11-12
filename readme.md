@@ -62,7 +62,11 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 ## Breakdownschets (week 1)
 
--uitwerken voor de 1e werkgroep - eind van de eerste week-
+<img src="images/Global_breakdown.png" width="375px" alt="Globale breakdown van algemene pagina CleanMyMac.">
+<img src="images/Detailed_breakdown_header.png" width="375px" alt="Globale breakdown van algemene pagina CleanMyMac.">
+<img src="images/Detailed_breakdown_article_section.png" width="375px" alt="Globale breakdown van algemene pagina CleanMyMac.">
+<img src="images/Detailed_breakdown_country_section.png" width="375px" alt="Globale breakdown van algemene pagina CleanMyMac.">
+<img src="images/Detailed_breakdown_footer.png width="375px" alt="Globale breakdown van algemene pagina CleanMyMac.">
 
 
 
