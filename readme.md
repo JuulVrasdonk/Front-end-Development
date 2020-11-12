@@ -75,8 +75,8 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 **Screenshot(s) van de eerste pagina (small screen):**
 
-<img src="images/eerste_pagina.png" width="375px" alt="omschrijving van de pagina">
+<img src="images/eerste_pagina.png" width="375px" alt="Algemene pagina CleanMyMac mobile screen">
 
 **Screenshot(s) van de tweede pagina (small screen):**
 
-<img src="images/tweede_pagina.png" width="375px" alt="omschrijving van de pagina">
+<img src="images/tweede_pagina.png" width="375px" alt="Uitleg pagina functie's van CleanMyMac mobile screen">
