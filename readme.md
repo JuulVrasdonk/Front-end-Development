@@ -71,12 +71,12 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 **Je focus:** Mijn aandacht gaat naar de surface plane. Ik zal mijn website ook wel Responsive maken. Als ik toch bezig ben. XD
 
-**Je opdracht:** Ik wil een website gaan maken waarbij ik middels animatie een kort verhaal vertel. Ik weet niet nog precies waar het verhaal over zal gaan. Ik wil voor de animatie's JS library's gaan gebruiken als anime.js en GSAP. 
+**Je opdracht:** Ik ga de website van CleanMyMac namaken. Hierbij maak ik een pagina na, waarin algemeen wordt uitgelegd wat CleanMyMac is. Als 2e pagina maak de pagina na waarin wordt uitgelegd wat de verschillende functie's in het programma doen. Als ik tijd over heb na het namaken van de pagina's wil ik nog animatie's toe gaan voegen die de uitleg van het programma, en haar functie's verbeteren.
 
 **Screenshot(s) van de eerste pagina (small screen):**
 
-<img src="images/dummy-plaatje.svg" width="375px" alt="omschrijving van de pagina">
+<img src="images/eerste_pagina.png width="375px" alt="omschrijving van de pagina">
 
 **Screenshot(s) van de tweede pagina (small screen):**
 
-<img src="images/dummy-plaatje.svg" width="375px" alt="omschrijving van de pagina">
+<img src="images/tweede_pagina.png" width="375px" alt="omschrijving van de pagina">
