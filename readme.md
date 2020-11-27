@@ -38,11 +38,15 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 ### Stand van zaken
 
--dit ging goed & dit was lastig-
+Ik heb een goed begin gemaakt aan mijn pagina. 
+De header is zo goed als af. 
+Ik moet mijn heading in mijn HTML nakijken. Die is soms nog niet helemaal semantisch. 
+Ik kan ik nog wat classes wegwerken. 
+Qua CSS moet ik meer consistent zijn  in mijn gebruiken van eenheden, de ene keer gebruik ik px en de andere keer em. 
 
 **Screenshot(s):**
-
--screenshot(s) van hoe ver je bent met korte uitleg-
+<img src="images/Productbio/Voortgang1.png" width="375px" alt="Header eigen website">
+<img src="images/Productbio/Hele_pagina_voortgang11.png" width="375px" alt="Header eigen website">
 
 ### Agenda voor meeting
 
@@ -80,6 +84,7 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 **Screenshot(s) van de eerste pagina (small screen):**
 
 <img src="images/eerste_pagina.png" width="375px" alt="Algemene pagina CleanMyMac mobile screen">
+
 
 **Screenshot(s) van de tweede pagina (small screen):**
 
