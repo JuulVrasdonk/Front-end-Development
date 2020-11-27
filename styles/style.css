@@ -182,6 +182,9 @@ article {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 15em;
+}
+article + img {
   overflow-x: hidden;
 }
 article section {
