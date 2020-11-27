@@ -1,10 +1,19 @@
 /* CSS Document */
+/* ***********************
+Algemene dingen
+*********************** */
+
+
 *, *::after, *::before {
   box-sizing:border-box;  
   font-family: 'Montserrat', sans-serif;
   text-decoration: none;
   margin: 0;
   padding: 0;
+}
+.background {
+  position: absolute;
+  z-index: -1;
 }
 
 /* ***********************
@@ -16,6 +25,8 @@ nav {
   display: flex;
   justify-content: center;
   height: 56px;
+  position: relative;
+  z-index: 1000;
 }
 nav ul {
   display: flex;
@@ -76,8 +87,13 @@ header {
   max-width: 1152px;
   width: 100vw;
   margin-top: 2.15em;
+  position: relative;
+  z-index: 999;
 }
-
+header.backgroundheader {
+  position: absolute;
+  z-index: -1;
+}
 .bannercontainer {
   display: flex;
   /* background-color: red; */
@@ -120,7 +136,12 @@ h1 {
   text-align: center;
   padding: 14px 34px;
   background-color: #06c668;
+  transition: 0.7s; 
   border-radius: 10px;
+}
+.headerbuttons a:first-of-type:hover {
+  background-color: #49d390;
+  transition: 1s; 
 }
 .headerbuttons a:last-of-type{
   color: #000000;
@@ -130,5 +151,77 @@ h1 {
   border-style: solid;
   border-color: rgba(51,51,51,.1);
   border-radius: 10px;
-
+  transition: 0.7s; 
 }
+.headerbuttons a:last-of-type:hover {
+  border-color: rgba(51,51,51, 1);
+  transition: 1s;
+}
+.headerimage{
+  top: -50em;
+  left: -9em;
+  transform: rotate(45deg);
+  overflow: hidden;
+}
+header img.infiniterotate {
+  animation: rotation 1s linear infinite;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(359deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+/* ***********************
+INHOUDELIJK OVER CLEAN MY MAC X
+*********************** */
+
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15em
+}
+article section {
+  max-width: 1152px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h3 {
+  font-size: 1.5em;
+  margin-bottom: .8em;
+  font-weight: 700;
+}
+article section p {
+  max-width: 47em;
+  font-weight: 400;
+  line-height: 1.5;
+}
+article section p + a {
+  padding: 11px 0 11px 30px;
+  border: 2px solid;
+  border-color: rgb(51,51,51);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  max-width: 18em;
+  text-align: left;
+  color: rgb(51,51,51);
+  margin-top: 2em;
+  font-weight: 600;
+}
+article section p + a img {
+  height: 1.4em;
+  padding-right: 30px;
+  padding-left: 10px;
+}
+article section p + a:hover {
+  background-color: rgba(51,51,51, 1);
+  color: #ffffff;
+  transition: .6s;
+}
+
