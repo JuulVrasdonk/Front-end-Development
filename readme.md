@@ -45,6 +45,8 @@ Ik kan ik nog wat classes wegwerken.
 Qua CSS moet ik meer consistent zijn  in mijn gebruiken van eenheden, de ene keer gebruik ik px en de andere keer em. 
 
 **Screenshot(s):**
+
+
 <img src="images/Productbio/Voortgang1.png" width="375px" alt="Header eigen website">
 <img src="images/Productbio/Hele_pagina_voortgang11.png" width="375px" alt="Header eigen website">
 
