@@ -2,7 +2,9 @@
 /* ***********************
 Algemene dingen
 *********************** */
-
+html {
+  overflow-x: hidden;
+}
 
 *, *::after, *::before {
   box-sizing:border-box;  
@@ -15,6 +17,16 @@ Algemene dingen
   position: absolute;
   z-index: -1;
 }
+img {
+  overflow-x: hidden;
+}
+/* ***********************
+Mobile hidden items
+*********************** */
+nav ul li span, header img + img {
+  display: none;
+}
+
 
 /* ***********************
 Nav bar 
@@ -39,14 +51,14 @@ nav ul li {
   list-style-type: none;
 }
 nav ul li + li {
-  margin-left: 4em;
+  margin-left: 2em;
 }
 nav ul li:first-of-type {
   margin-right: auto;
-  margin-left: 15px;
+  margin-left: 1.4em;
 }
 nav ul li:last-of-type {
-  margin-right: 25px;
+  margin-right: 2em;
 }
 nav ul li a {
   display: flex;
@@ -66,6 +78,7 @@ nav ul li a img {
 }
 .macpawlogo {
   min-height: 20px;
+  overflow-x: visible;
 }
 .logotext {
   font-size: 20px;
@@ -84,6 +97,7 @@ Header
 }
 header {
   display: flex;
+  flex-direction: column;
   max-width: 1152px;
   width: 100vw;
   margin-top: 2.15em;
@@ -96,45 +110,44 @@ header.backgroundheader {
 }
 .bannercontainer {
   display: flex;
-  /* background-color: red; */
-  width: 50%;
-  align-items: center;
+  justify-content: center;
 }
 .headertextcontainer {
-  /* background-color:blue; */
   display: flex; 
   flex-direction: column;
-  width: 50%;
 }
 .bannerimage {
-  margin-left: 2.7%;
-  width: 85%;
+  width: 65%;
 }
 h1 {
-  font-size: 2em;
-  margin: 1.27em 0 .5em 1.85em;
+  font-size: 1.5em;
+  margin: 1.27em 0 .5em 1.3em;
 }
 .motto {
-  margin: .3em 0 0 3.8em;
+  margin: .3em 0 0 2.3em;
 }
 .motto  h2{
-  font-size: 2.5em;
+  font-size: 1.7em;
   font-weight: 400;
   line-height: 1.3;
 }
 .headertextcontainer p {
   line-height: 1.8;
-  max-width: 80%;
-  margin: 1.5em 0 0 3.7em;
+  max-width: 85%;
+  margin: 1.5em 0 0 2.4em;
 }
 .headerbuttons {
-  margin: 4em 0  0 3.7em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2em;
 }
 .headerbuttons a:first-of-type{
   color: #ffffff;
   font-weight: 600;
   text-align: center;
-  padding: 14px 34px;
+  padding: 14px 0;
+  width: 90%;
   background-color: #06c668;
   transition: 0.7s; 
   border-radius: 10px;
@@ -146,8 +159,10 @@ h1 {
 .headerbuttons a:last-of-type{
   color: #000000;
   font-weight: 600;
-  margin-left: 1em;
-  padding: 14px 34px;
+  text-align: center;
+  margin-top: 1em;
+  padding: 14px 0;
+  width: 90%;
   border-style: solid;
   border-color: rgba(51,51,51,.1);
   border-radius: 10px;
@@ -158,7 +173,7 @@ h1 {
   transition: 1s;
 }
 .headerimage{
-  top: -50em;
+  top: -63em;
   left: -9em;
   transform: rotate(45deg);
   overflow: hidden;
@@ -175,56 +190,357 @@ header img.infiniterotate {
   }
 }
 /* ***********************
-INHOUDELIJK OVER CLEAN MY MAC X
+MAAK KENNIS MET...
 *********************** */
 
-article {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 15em;
-}
-article + img {
-  overflow-x: hidden;
-}
-article section {
-  max-width: 1152px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+
 h3 {
-  font-size: 1.5em;
+  font-size: 1.3em;
   margin-bottom: .8em;
   font-weight: 700;
+  position: relative;
+  z-index: 1000;
 }
-article section p {
+h4 {
+  font-size: 1.15em;
+}
+article section strong {
+  font-size: 1.8em;
+  margin-bottom: 0.7em;
+}
+section p {
   max-width: 47em;
   font-weight: 400;
   line-height: 1.5;
+  position: relative;
+  z-index: 1000;
 }
-article section p + a {
-  padding: 11px 0 11px 30px;
+  main section:first-of-type p + a {
+  padding: 11px 0 11px 20px;
+  max-width: 14em;
   border: 2px solid;
   border-color: rgb(51,51,51);
   border-radius: 10px;
   display: flex;
   align-items: center;
-  width: 18em;
   text-align: left;
   color: rgb(51,51,51);
   margin-top: 2em;
   font-weight: 600;
+  position: relative;
+  z-index: 1000;
 }
-article section p + a img {
+ main section:first-of-type p + a img {
   height: 1.4em;
-  padding-right: 30px;
+  padding-right: 10px;
   padding-left: 10px;
+  position: relative;
+  z-index: 1000;
 }
-article section p + a:hover {
+ section p + a:hover {
   background-color: rgba(51,51,51, 1);
   color: #ffffff;
   transition: .6s;
 }
+main section:nth-of-type(1) {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  margin: 5em 5% 0 5%;
+}
+/* ***********************
+ARTICLE
+*********************** */
+article {
+  position: relative;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #392b44;
+} 
+.X, .color {
+  width: 220vw;
+  display: flex;
+  align-self: center;
+}
+article section {
+  max-width: 1152px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 5%;
+  position: relative;
+  z-index: 1000;
+}
+article section p, article section a, article section strong, article section h3, article section h4 {
+  color:white
+}
+article section p {
+  font-weight: 400;
+}
+article section:nth-child(3) {
+  margin-top: 3em;
+  position: relative;
+  z-index: 1000;
+  width: 90%;
+  max-height: 30em;
+  display: flex;
+  align-items: center;
+}
 
+.deviceimage h2 {
+  display: none;
+}
+.deviceimage img {
+  object-fit: contain;
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+  z-index: 1000;
+}
+
+.deviceimage img + img{
+  position: absolute;
+  top: 10%;
+  height: 50%;
+}
+article section a, main section a {
+  color: #6bf;
+  border: none;
+  max-width: none;
+  font-weight: 400;
+  padding: 0;
+  margin-bottom: 3.5em;
+}
+article section a:hover {
+  background-color: transparent;
+  color: #6bf;
+}
+article section a img, main section a img {
+  height: 0.8em;
+}
+article section:nth-child(5) {
+  margin-top: 0;
+}
+.macbook img{
+  object-fit: contain;
+  width: 145%;
+  position: relative;
+  z-index: 1000;
+  align-self: center;
+}
+.macbook img + img  {
+  position: absolute;
+  top: 10%;
+  height: 70%;
+}
+article section:nth-child(6) {
+  background-color: rgba(39,27,48,.72);
+  width: 100vw;
+  border-radius: 2em;
+  margin-top: 3em;
+}
+article section:nth-child(6) img {
+  height: 3.5em;
+  margin-bottom: 2em;
+  object-fit: contain;
+  align-self: flex-start;
+}
+article section:nth-child(6) h4 {
+  margin-bottom: 1em;
+}
+article section:nth-child(6) section:first-of-type  {
+  margin-top: 2em ;
+}
+article section:nth-child(6) section + section {
+  margin-top: 3em ;
+  margin-bottom: 3em;
+}
+article section:nth-child(7){
+  margin-top: 2em;
+}
+article section:nth-child(9) {
+  margin-top: 1.5em;
+}
+article section:nth-child(10), article section:nth-child(11){
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 3em;
+  background-color: rgba(39,27,48,.72);
+  width: 90%;
+  border-radius: 1em;
+}
+article section:nth-child(10) img, article section:nth-child(11) img {
+  margin-top: 7%;
+  margin-bottom: 2%;
+}
+article section:nth-child(10) p, article section:nth-child(11) p {
+  margin-bottom: 3em;
+  font-size: 0.9em;
+  margin: 0.5em 7% 4em 7%;
+
+}
+/* ***********************
+LIJST MET CIJFERS 
+*********************** */
+article section:nth-child(14) {
+  margin-top: 2em;
+}
+
+article section:nth-child(14) ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2em;
+}
+article section:nth-child(14) ul strong {
+  margin-bottom: 0;
+}
+article section:nth-child(14) ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: rgba(39,27,48,.72);
+  width: 100%;
+  height: 25vh;
+  border-radius: 1em;
+}
+article section:nth-child(14) ul li + li {
+  margin-top: 1em;
+}
+article section:nth-child(14) ul li strong {
+  font-size: 3.8em;
+}
+article section:nth-child(14) ul li:first-of-type strong {
+  color: #F3659F;
+}
+article section:nth-child(14) ul li:nth-of-type(2) strong {
+  color: #A965F3;
+}
+article section:nth-child(14) ul li:last-of-type strong {
+  color: #53D9FF;
+}
+.extrainfo {
+  font-size: .9em;
+  margin-top: 1em;
+  color: #acacac;
+}
+
+/* ***********************
+LAATSTE ITEMS ARTICLE
+*********************** */
+
+article section:nth-child(15) {
+  position: relative;
+  z-index: 1000;
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+article section:nth-child(15) h3 {
+  font-size: 1.8em;
+  margin-bottom: 0.7em; 
+}
+.city {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+}
+article section:nth-child(16) {
+  margin-bottom: 0;
+}
+
+/* ***********************
+TALEN CMM
+*********************** */
+main section:nth-child(3) h3 {
+  width: 100vw;
+  text-align: center;
+  margin: 4em 0;
+  font-size: 1.3em;
+}
+main section:nth-child(3) ul{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-row-gap: 5em;
+  list-style-type: none;
+  justify-items: center;
+  align-items: center;
+  margin-bottom: 30em;
+  max-width: 90%;
+  margin: 0 5%;
+}
+main section:nth-child(3) ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: .8em; 
+}
+main section:nth-child(3) ul li img {  
+  width: 6em;
+  border-radius: 1em;
+  margin-bottom: 1em;
+  border: 3px solid rgba(51,51,51,.08);
+}
+main section:nth-child(3) ul li:nth-of-type(13) {
+  grid-column-start: 2 ;
+}
+/* ***********************
+CMM VOOR BEDRIJVEN
+*********************** */
+main > section:nth-child(4) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main section:nth-child(4) h3, main section:nth-child(6) h3  {
+  text-align: center;
+  margin: 4em 0 1em 0;
+  font-size: 1.3em;
+}
+main section:nth-child(4) p, main section:nth-child(6) p {
+  max-width: 90%;
+  margin-bottom: 1.5em;
+}
+main section:nth-child(4) section {
+  width: 90%;
+  border: 2px solid rgba(51,51,51,.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1em;
+  margin-bottom: 3em;
+  margin-top: 0em;
+}
+main section:nth-child(4) section > img {
+  width: 3.5em;
+  margin: 3em 0;
+
+}
+main section:nth-child(4) section > a {
+  font-weight: 700;
+  font-size: 1.2em;
+  margin-top: 1em;
+}
+main section:nth-child(5) {
+  display: none;
+}
+
+
+/* ***********************
+Tablet
+*********************** */
+@media screen and (min-width: 768px) {
+
+}
+
+
+
+/* ***********************
+Desktop
+*********************** */
+@media screen and (min-width: 1025px) {
+
+}
