@@ -1,0 +1,90 @@
+body {
+    background-color: #D6FFE3;
+    margin: 0%;
+}
+
+main ul li {
+    font-size: 35px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: white;
+    border: 3px solid black;
+    padding: 5px;
+    margin: 10px;
+    float: left;
+    text-align: center;
+    min-width: 25%;
+    height: 250px;
+    flex-wrap: wrap;
+}
+
+div {
+    flex-wrap: wrap;
+}
+header {
+    padding: 5px;
+    text-align: center;
+    background-color: #8DE0A8;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+}
+
+h1 {
+    color: white;
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 2px 2px #287A5F;
+    border: 7px double black; /* hoe border om alleen tekst*/
+}
+nav ul {
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /*background-color: #8BCC92;*/
+    display: flex;
+}
+
+nav li {
+    width: 100%;
+    height: 55px;
+    font-size: 15px; /* hoe krijg ik de navbar één breedte en onderaan de header?*/
+} 
+nav li a {
+    display: block;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+nav a {
+    text-decoration: none;
+    display: block;
+    padding: 15px 25px;
+    text-align: center;
+    background-color: #4E9466;
+    color: black;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+nav a:hover {
+    background-color: #8DE0A8;
+    color: black;
+}
+
+footer p {
+    background-color: blueviolet;
+    border: 5px crimson;
+} Waarom wordt alles paars? -> wrap
+
+/* Hoe link i de andere html pagina's in het css bestand?*/
+
+input radio {
+    border:black 2px black
+}
