@@ -26,12 +26,21 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 -same as voortgang 1-
 
-
+**Screenshot(s):**
+<img src="images/Productbio/Week_5_voortgang.png"  width="375px" alt="Hele eerste pagina">
 
 ## Voortgang 2 (week 5)
 
--same as voortgang 1-
+## Stand van zaken
 
+Mijn eerste pagina is zo goed als af voor mobiel. 
+Ik heb al aardig wat animatie's toegevoegd er is alleen een microanimatie die me nog niet gelukt is. 
+Verder heb ik grid toegepast om daar ook wat ervaring mee te krijgen. 
+Ik gebruik op sommige momenten nog wel een paar divjes, als alles af is ga ik die nog proberen weg te werken.
+Nu op naar mijn tweede pagina.
+
+**Screenshot(s):**
+<img src="images/Productbio/Week_5_voortgang.png"  width="375px" alt="Hele eerste pagina">
 
 
 ## Voortgang 1 (week 3)
