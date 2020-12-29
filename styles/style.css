@@ -13,7 +13,11 @@ html {
   margin: 0;
   padding: 0;
 }
-.background {
+/* .background {
+  position: absolute;
+  z-index: -1;
+} */
+header > img, main > article > img {
   position: absolute;
   z-index: -1;
 }
@@ -69,7 +73,7 @@ nav ul li a {
   font-weight: 600;
   color: #000000;
 }
-nav ul li a img {
+body > nav ul li a img {
   max-height: 20px;
   margin-right: 15px;
   object-fit: contain;
@@ -78,34 +82,38 @@ nav ul li:nth-of-type(2) a img {
   width: 1.2em;
   margin-right: 0;
 }
-.hamburger {
+body >  nav ul li:last-of-type img {
   height: 15px;
   margin-right: 20%;
 }
-.macpawlogo {
+body > nav ul li:first-of-type img {
   min-height: 20px;
   overflow-x: visible;
   transform: rotate(0deg);
   transition: all .5s;
 
 }
-.macpawlogo:hover {
+body > nav ul li:first-of-type img:hover {
   transform: rotate(360deg);
 }
-.logotext:hover > .macpawlogo {
+body > nav ul li:first-of-type a:hover > img {
   transform: rotate(360deg);
 }
-.logotext {
+body > nav ul li:first-of-type a {
   font-size: 20px;
   max-width: 10px;
 }
-
-
+/* ***********************
+2nd nav-bar 
+*********************** */
+header > nav {
+  display: none;
+}
 
 /* ***********************
 Header
 *********************** */
-.centerheader {
+nav + section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -115,53 +123,42 @@ Header
   top: -56px;
 }
 header {
-  display: flex;
-  flex-direction: column;
   max-width: 1152px;
   width: 100vw;
   z-index: 999;
   position: relative;
 }
-header.backgroundheader {
-  z-index: -1;
-}
-.bannercontainer {
+header > section:first-of-type {
   display: flex;
   justify-content: center;
 }
-.headertextcontainer {
+header > section:last-of-type {
   display: flex; 
   flex-direction: column;
 }
-.bannerimage {
-  width: 60%;
+header > section:first-of-type img{
+  width: 80%;
   margin-top: 8vh;
   object-fit: contain;
 }
 h1 {
   font-size: 1.5em;
-  margin: 1.27em 0 .5em 1.3em;
+  margin: 1.27em 0 .5em 5%;
 }
-.motto {
-  margin: .3em 0 0 2.3em;
+header > section:last-of-type section{
+  margin: .3em 0 0 5%;
 }
-.motto  h2{
+header > section:last-of-type section  h2{
   font-size: 1.7em;
   font-weight: 400;
   line-height: 1.3;
 }
-.headertextcontainer p {
+header > section:last-of-type p {
   line-height: 1.8;
   max-width: 85%;
-  margin: 1.5em 0 0 2.4em;
+  margin: 1.5em 0 0 5%;
 }
-.headerbuttons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 2em;
-}
-.headertextcontainer a:first-of-type{
+header > section:last-of-type a:first-of-type{
   color: #ffffff;
   font-weight: 600;
   text-align: center;
@@ -172,11 +169,11 @@ h1 {
   transition: 0.7s; 
   border-radius: 10px;
 }
-.headertextcontainer a:first-of-type:hover {
+header > section:last-of-type a:first-of-type:hover {
   background-color: #49d390;
   transition: 1s; 
 }
-.headertextcontainer a:last-of-type{
+header > section:last-of-type a:last-of-type{
   color: #000000;
   font-weight: 600;
   text-align: center;
@@ -189,11 +186,11 @@ h1 {
   border-radius: 10px;
   transition: 0.7s; 
 }
-.headertextcontainer a:last-of-type:hover {
+header > section:last-of-type a:last-of-type:hover {
   border-color: rgba(51,51,51, 1);
   transition: 1s;
 }
-.headerimage{
+header > img{
   top: -63em;
   left: -9em;
   animation: beginningrotation 1.5s ease-in;
@@ -207,7 +204,7 @@ h1 {
     transform: rotate(45deg);
   }
 }
-header img.infiniterotate {
+header > img:last-of-type {
   animation: rotation 1s linear infinite;
 }
 @keyframes rotation {
@@ -218,7 +215,7 @@ header img.infiniterotate {
     transform: rotate(0deg);
   }
 }
-.bannerimage, header h1, header h2, header p, header a {
+header > section:first-of-type img, header h1, header h2, header p, header a {
   animation: slidedown 1s ease-in;
 }
 header h1 {
@@ -255,7 +252,7 @@ h3 {
   margin-bottom: .8em;
   font-weight: 700;
   position: relative;
-  z-index: 1000;
+  z-index: 4;
 }
 h4 {
   font-size: 1.15em;
@@ -269,7 +266,7 @@ section p {
   font-weight: 400;
   line-height: 1.5;
   position: relative;
-  z-index: 1000;
+  z-index: 4;
 }
   main section:first-of-type p + a {
   padding: 11px 0 11px 20px;
@@ -284,14 +281,14 @@ section p {
   margin-top: 2em;
   font-weight: 600;
   position: relative;
-  z-index: 1000;
+  z-index: 4;
 }
  main section:first-of-type p + a svg {
   height: 1.4em;
   padding-right: 10px;
   padding-left: 10px;
   position: relative;
-  z-index: 1000;
+  z-index: 4;
   margin-top: 0
 }
  section:first-of-type p + a:hover {
@@ -315,7 +312,7 @@ ARTICLE
 *********************** */
 article {
   position: relative;
-  z-index: 1000;
+  z-index: 4;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -333,7 +330,7 @@ article section {
   flex-direction: column;
   margin: 0 5%;
   position: relative;
-  z-index: 1000;
+  z-index: 4;
 }
 article section p, article section a, article section strong, article section h3, article section h4 {
   color:white
@@ -344,28 +341,35 @@ article section p {
 article section:nth-child(3) {
   margin-top: 3em;
   position: relative;
-  z-index: 1000;
+  z-index: 4;
   width: 90%;
   max-height: 30em;
   display: flex;
   align-items: center;
 }
 
-.deviceimage h2 {
-  display: none;
-}
 .deviceimage img {
   object-fit: contain;
   width: 100%;
   max-width: 600px;
   position: relative;
-  z-index: 1000;
+  z-index: 4;
 }
-
 .deviceimage img + img{
   position: absolute;
   top: 10%;
   height: 50%;
+}
+.protected-page img {
+  object-fit: contain;
+  width: 150%;
+  max-width: 600px;
+  z-index: 4;
+}
+.protected-page img + img{
+  position: absolute;
+  top: 10%;
+  height: 70%;
 }
 article section a, main section a {
   color: #6bf;
@@ -373,7 +377,7 @@ article section a, main section a {
   max-width: none;
   font-weight: 400;
   padding: 0;
-  margin-bottom: 3.5em;
+  margin: 1em 0 3.5em 0;
 }
 article section a > img {
  margin-left: 10px;
@@ -399,7 +403,7 @@ article section:nth-child(5) {
   object-fit: contain;
   width: 145%;
   position: relative;
-  z-index: 1000;
+  z-index: 4;
   align-self: center;
 }
 .macbook img + img  {
@@ -422,10 +426,18 @@ main article section:nth-child(6) img {
 main article section:nth-child(6) h4 {
   margin-bottom: 1em;
 }
-main article section:nth-child(6) section:first-of-type  {
-  margin-top: 2em ;
+main article > section:nth-child(6) > article {
+    position: relative;
+    z-index: 4;
+    display: block;
+    background-color: transparent;
+    overflow: hidden;
+    padding-left: 5%;
 }
-main article section:nth-child(6) section + section {
+main article > section:nth-child(6) > article:first-of-type  {
+  margin-top: 2em;
+}
+main article > section:nth-child(6) > article + article{
   margin-top: 3em ;
   margin-bottom: 3em;
 }
@@ -508,7 +520,7 @@ LAATSTE ITEMS ARTICLE
 
 article section:nth-child(15) {
   position: relative;
-  z-index: 1000;
+  z-index: 4;
   margin-top: 3em;
   margin-bottom: 3em;
 }
@@ -563,22 +575,22 @@ main section:nth-child(3) ul li:nth-of-type(13) {
 /* ***********************
 CMM VOOR BEDRIJVEN
 *********************** */
-main > section:nth-child(4) {
+main > section:nth-last-of-type(5) {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-main > section:nth-child(4) h3, main section:nth-child(6) h3  {
+main > section:nth-last-of-type(5) h3, main section:nth-child(2) h3  {
   text-align: center;
   margin: 4em 0 1em 0;
   font-size: 1.3em;
 }
-main section:nth-child(4) p, main section:nth-child(6) p {
+main section:nth-last-of-type(5) p, main section:nth-child(2) p {
   max-width: 90%;
   margin-bottom: 1.5em;
 }
-main section:nth-child(4) article {
+main section:nth-last-of-type(5) article {
   width: 90%;
   border: 2px solid rgba(51,51,51,.08);
   display: flex;
@@ -590,24 +602,24 @@ main section:nth-child(4) article {
   transition: .5s;
   background-color: white;
 }
-main > section:nth-child(4) article:hover {
+main > section:nth-last-of-type(5) article:hover {
   border-color: #000000 ;
   transition: .5s;
 }
-main section:nth-child(4) article > img {
+main section:nth-last-of-type(5) article > img {
   width: 3.5em;
   margin: 3em 0;
 
 }
-main section:nth-child(4) article > a {
+main section:nth-last-of-type(5) article > a {
   font-weight: 700;
   font-size: 1.2em;
   margin-top: 1em;
 }
-main section:nth-child(5) {
+main section:nth-last-of-type(4) {
   display: none;
 }
-main > section:nth-child(6) {
+main > section:nth-last-of-type(3) {
   width: 90%;
   margin: 0 5%;
   background-color: #FAF9FE;
@@ -617,26 +629,28 @@ main > section:nth-child(6) {
   position: relative;
   margin-top: 10em;
 }
-main > section:nth-child(6) img {
+main > section:nth-last-of-type(3) img {
   position: absolute;
   top: -200px;
   width: 90%;
   align-self: center;
+  max-width: 28.75em;
 }
-main > section:nth-child(6) h3 {
+main > section:nth-last-of-type(3) h3 {
   margin-top: 10em;
   text-align: left;
   margin-left: 5%;
 }
-main > section:nth-child(6) h4 {
+main > section:nth-last-of-type(3) h4 {
   font-weight: 400;
   margin-bottom: 1em;
   margin-left: 5%;
 }
-main > section:nth-child(6) p {
+main > section:nth-last-of-type(3) p {
   margin-left: 5%;
+  margin-bottom: 5%;
 }
-main > section:nth-child(6) a{
+main > section:nth-last-of-type(3) a{
   align-self: center;
   padding: 14px 0;
   width: 90%;
@@ -646,15 +660,15 @@ main > section:nth-child(6) a{
   font-weight: 600;
   margin: 0;
 }
-main > section:nth-child(6) a:first-of-type {
+main > section:nth-last-of-type(3) a:first-of-type {
   background-color: #06c668;
   transition: 0.7s; 
 }
-main > section:nth-child(6) a:first-of-type:hover {
+main > section:nth-last-of-type(3) a:first-of-type:hover {
   background-color: #49d390;
   transition: 1s; 
 }
-main > section:nth-child(6) a:last-of-type {
+main > section:nth-last-of-type(3) a:last-of-type {
   color: #000000;
   border-style: solid;
   border-color: rgba(51,51,51,.1);
@@ -663,12 +677,12 @@ main > section:nth-child(6) a:last-of-type {
   margin-top: 1em;
   margin-bottom: 2em;
 }
-main > section:nth-child(6) a:last-of-type:hover {
+main > section:nth-last-of-type(3) a:last-of-type:hover {
   border-color: rgba(51,51,51, 1);
   transition: 1s;
 }
 
-main > section:nth-child(7) ul {
+main > section:nth-last-of-type(2) ul {
   width: 90%;
   margin: 0 5% ;
   border: solid rgba(51,51,51,.1);
@@ -678,22 +692,22 @@ main > section:nth-child(7) ul {
   align-items: center;
   margin-top: 3em;border-radius: 10px;
 }
-main > section:nth-child(7) ul img {
+main > section:nth-last-of-type(2) ul img {
   height: 1em;
   margin-bottom: 0.5em;
 }
-main section:nth-child(7) ul li p img {
+main > section:nth-last-of-type(2) ul li p > img {
   margin-bottom: 0;
 }
-main > section:nth-child(7) ul li {
+main > section:nth-last-of-type(2) ul li {
   display: flex;
   flex-direction: column; 
   margin-bottom: 2em;
 }
-main > section:nth-child(7) ul li:first-of-type {
+main > section:nth-last-of-type(2) ul li:first-of-type {
   margin-top: 2em;
 }
-main > section:nth-child(7) ul li strong {
+main > section:nth-last-of-type(2) ul li strong {
   width: 100%;
   text-align: center;
   font-size: .6em;
@@ -764,10 +778,222 @@ main > section:last-of-type form button:hover {
   transition: .7s;
 }
 /* ***********************
+Always Protected pagina
+*********************** */
+main > article > .gradient-bg {
+  background-image:
+  linear-gradient(
+    to top left, 
+    rgba(255, 184, 32, 0.2), rgba(255, 184, 32, 0) 70%
+  );
+  padding: 0 5%;
+  width: 100vw;
+}
+main > article > .gradient-bg article {
+  background-color: transparent;
+}
+main > article > .gradient-bg article img:first-of-type {
+  margin-top: 6em;
+}
+main > article > .gradient-bg article:first-of-type img:last-of-type {
+    position: absolute;
+    top: 33%;
+    height: 53%;
+}
+main > article > .gradient-bg article > h3 {
+  width: 100%;
+}
+main > article > .gradient-bg article > a {
+  height: auto;
+  width: 100%;
+  text-align: left;
+  margin-top: 1em;
+}
+main > article > .gradient-bg article > a > img:first-of-type {
+  margin-top: 0;
+}
+
+
+/* ***********************
 Tablet
 *********************** */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 36em) {
+  header img + img {
+    display: block;
+  }
+  nav ul li span{
+    display: inline-block;
+    margin-left: 1em;
+  }
+  nav ul li:last-of-type span {
+    margin-left: 0;
+  }
+  nav ul li:last-of-type img {
+    width: 3em;
+    margin-right: 0;
+  }
+  /* ***********************
+2nd navbar 
+*********************** */
+  .none {
+    display: none; 
+  }
+  .visible {
+    display: flex;
+    justify-content: center;
+    height: 3em;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 5;
+    box-shadow: 0 1em 2em -1em rgba(158, 158, 158, .5);
+    animation: slidedown .1s ease-in;
+  }
+  header > nav ul li a > img {
+    height: 2em;
+    margin-right: .5em;
+  }
+  header > nav ul li:first-of-type a {
+    animation-delay: 0s;
+    animation: none;
+  }
+  header > nav ul li:nth-of-type(2) a {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: .8em;
+    padding: .7em 2em;
+    text-align: center;
+    margin: 0;
+    background-color: #06c668;
+    border-radius: .5em;
+    animation-delay: 0s;
+    animation: none;
+  }
+  header > nav ul li:nth-of-type(2) a:hover {
+    background-color: #49d390;
+    transition: 1s; 
+  }
+  header > nav ul li:nth-of-type(3) a {
+    color: #000000;
+    font-weight: 600;
+    font-size: .8em;
+    text-align: center;
+    margin-top: 1em;
+    padding: .7em 2em;
+    margin: 0;
+    border-style: solid;
+    border-color: rgba(51,51,51,.1);
+    border-radius: .5em;
+    animation-delay: 0s;
+    animation: none;
+  }
+  header > nav ul li:nth-of-type(3) a:hover {
+    border-color: rgba(51,51,51, 1);
+    transition: 1s;
+  }
 
+  header > section:first-of-type img{
+    width: 85%;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  header > section:last-of-type section  h2{
+    font-size: 2.5em;
+    font-weight: 400;
+    line-height: 1.3;
+  }
+  header > section:last-of-type {
+    display: inline-block;
+  }
+  header > section:last-of-type a:first-of-type {
+    width: 35%;
+    display: inline-block;
+    margin-right: 0;
+  }
+  header > section:last-of-type a:last-of-type {
+    width: 30%;
+    display: inline-block;
+    margin-left: .5em;
+  }
+  header > a:last-of-type {
+    animation-delay: .4s;
+  }
+  main article section:nth-child(6) {
+    width: 90vw;
+  }
+  main article section:nth-child(6) p {
+    font-size: 0.875em;
+    width: 85%;
+    font-weight: 300;
+  }
+  main article > section:nth-child(6) > article {
+    padding-left: 7.5%;
+  }
+  h3 {
+    font-size: 1.5em;
+  }
+  h4 {
+    font-size: 1.65em;
+  }
+  article section strong {
+    font-size: 2.3em;
+  }
+  main > section:nth-last-of-type(3) p {
+    width: 90%;
+    margin-bottom: 0;
+  }
+  main > section:nth-last-of-type(3) h4 {
+    font-size: 1.4em;
+  }
+  main > section:nth-last-of-type(3) a:first-of-type {
+    padding: 0.875em 2.5em;
+    margin-right: .5em;
+    margin-left: 5%;
+    line-height: 8em;
+  }
+  main > section:nth-last-of-type(3) a:last-of-type {
+    padding: 0.875em 2.5em;
+  }
+  main > section:nth-last-of-type(2) ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  main > section:nth-last-of-type(2) ul li {
+    width: 15em;
+    margin-left: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  main > section:nth-last-of-type(2) ul li p {
+    font-size: .875em;
+  }
+  main > section:nth-last-of-type(2) ul li{
+    margin-top: 4em;
+    margin-bottom: 0;
+  }
+  main > section:nth-last-of-type(2) ul li:nth-of-type(3), main > section:nth-last-of-type(2) ul li:last-of-type {
+    margin-bottom: 4em;
+  }
+  .extrainfo {
+    text-align: center;
+    margin-left: 0;
+  }
+  main > section:last-of-type form {
+    flex-direction: row;
+  }
+  main > section:last-of-type form input {
+    margin: 0;
+    margin-right: 2%;
+    width: 75%;
+  }
+  main > section:last-of-type form button {
+    width: 23%;
+  }
 }
 
 
