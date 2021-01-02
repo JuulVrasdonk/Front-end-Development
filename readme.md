@@ -6,25 +6,39 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 
 ## Bronnenlijst
-1. -bron 1-
-2. -bron 2-
-3. -...-
+1. CSS gradients: 
+Coyier, C. (2017, 15 september). CSS Gradients. CSS-Tricks. https://css-tricks.com/css3-gradients/
+2. Intersection Observer API video:
+Kevin Powell. (2019, 19 juni). How to change your navigation style on scroll. YouTube. https://www.youtube.com/watch?v=RxnV9Xcw914&t=663s
+3. Intersection Observer API documentatie: 
+Intersection Observer API - Web APIs | MDN. (2020, 18 december). MDN Web Docs. https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
 
 
 
 ## Eindgesprek (week 7/8)
 
--dit ging goed & dit was lastig-
+** Dit ging goed:**
+De herhaling van wat specifiekere CSS materie heeft me goed gedaan.
+Zo merk ik dat ik veel makkelijker een animatie kan vertalen naar keyframes. 
+Ook heb ik toch nog wel aardig wat nieuwe technieken leren kennen. 
+Ik ken nu een stuk meer css Selectors uit mijn hoofd en ik kan nu makkelijk zonder classes specifieke elementen in mijn DOM aanroepen. 
+** Dit ging niet goed:**
+Ik denk dat de keuze van de pagina niet helemaal slim is gemaakt. 
+De CleanMyMac X pagina is erg lang waardoor ik veel tijd kwijt was aan het vormgeven en responsive maken van de pagina. 
+Ik had mij liever meer verdiept in het maken van hele vette animatie's, waarbij ik ook Javascript moest toepassen. Ik heb mijn verse Javascript naar mijn mening te weinig gebruikt op deze pagina door de lengte de van de pagina. 
 
 **Screenshot(s):**
-
--screenshot(s) van je eindresultaat-
-
+<img src="images/Productbio/Week_5_voortgang.png"  width="375px" alt="Hele eerste pagina mobiel ">
+<img src="images/Productbio/hele-tweede-pagina.png"  width="375px" alt="Hele tweede pagina mobiel ">
+<img src="images/Productbio/hele_pagina_desktop.png"  width="375px" alt="Hele eerste pagina desktop">
 
 
 ## Voortgang 3 (week 6)
 
--same as voortgang 1-
+## Stand van zaken
+
+Mijn eerste pagina is af voor mobiel. De pagina ziet er qua uiterlijk hetzelfde uit als de pagina in week 5.
+Het enige dat ik nog moest doen om de mobiele versie af te maken was het toevoegen van verschillende animatie's. Zo animeert het 'Macpaw' logo op achtergrond als je de pagina reload. Ik zakt alle content in de header 1 voor 1 als de pagina wordt gereload. De volgende stap is de tweede pagina maken. Ik heb besloten de 'Always Protected' pagina na te maken. In die pagina zitten nog wat interessante elementen (zoals een gradient background). Als ik de tweede pagina af heb wil ik nog kijken hoever ik kan komen met het responsive maken van de pagina's.   
 
 **Screenshot(s):**
 <img src="images/Productbio/Week_5_voortgang.png"  width="375px" alt="Hele eerste pagina">

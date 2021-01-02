@@ -13,10 +13,6 @@ html {
   margin: 0;
   padding: 0;
 }
-/* .background {
-  position: absolute;
-  z-index: -1;
-} */
 header > img, main > article > img {
   position: absolute;
   z-index: -1;
@@ -113,20 +109,13 @@ header > nav {
 /* ***********************
 Header
 *********************** */
-nav + section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow-x: hidden;
-  overflow-y: visible;
+
+header {
   position: relative;
   top: -56px;
-}
-header {
   max-width: 1152px;
-  width: 100vw;
   z-index: 999;
-  position: relative;
+  overflow: hidden;
 }
 header > section:first-of-type {
   display: flex;
@@ -310,14 +299,14 @@ main section:nth-of-type(1) {
 /* ***********************
 ARTICLE
 *********************** */
-article {
+main > article {
   position: relative;
   z-index: 4;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #392b44;
-  overflow: hidden;
+  overflow-x: hidden;
 } 
 .X, .color {
   width: 220vw;
@@ -325,7 +314,7 @@ article {
   align-self: center;
 }
 article section {
-  max-width: 1152px;
+  max-width: 72em;
   display: flex;
   flex-direction: column;
   margin: 0 5%;
@@ -351,7 +340,7 @@ article section:nth-child(3) {
 .deviceimage img {
   object-fit: contain;
   width: 100%;
-  max-width: 600px;
+  max-width: 70em;
   position: relative;
   z-index: 4;
 }
@@ -441,26 +430,35 @@ main article > section:nth-child(6) > article + article{
   margin-top: 3em ;
   margin-bottom: 3em;
 }
+main article > section:nth-child(6) > article p {
+  max-width: 90%;
+}
 article section:nth-child(7){
   margin-top: 2em;
 }
 article section:nth-child(9) {
   margin-top: 1.5em;
 }
-article section:nth-child(10), article section:nth-child(11){
+article section:nth-child(10){
   display: flex;
   align-items: center;
   text-align: center;
   margin-bottom: 3em;
+  width: 100%;
+}
+article section:nth-child(10) article {
   background-color: rgba(39,27,48,.72);
   width: 90%;
   border-radius: 1em;
 }
-article section:nth-child(10) img, article section:nth-child(11) img {
+article section:nth-child(10) article:first-of-type {
+  margin-bottom: 2em;
+}
+article section:nth-child(10) article img {
   margin-top: 7%;
   margin-bottom: 2%;
 }
-article section:nth-child(10) p, article section:nth-child(11) p {
+article section:nth-child(10) article p{
   margin-bottom: 3em;
   font-size: 0.9em;
   margin: 0.5em 7% 4em 7%;
@@ -469,21 +467,21 @@ article section:nth-child(10) p, article section:nth-child(11) p {
 /* ***********************
 LIJST MET CIJFERS 
 *********************** */
-article section:nth-child(14) {
+article section:nth-child(13) {
   margin-top: 2em;
 }
 
-article section:nth-child(14) ul {
+article section:nth-child(13) ul {
   list-style-type: none;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 2em;
 }
-article section:nth-child(14) ul strong {
+article section:nth-child(13) ul strong {
   margin-bottom: 0;
 }
-article section:nth-child(14) ul li {
+article section:nth-child(13) ul li {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -493,19 +491,19 @@ article section:nth-child(14) ul li {
   height: 25vh;
   border-radius: 1em;
 }
-article section:nth-child(14) ul li + li {
+article section:nth-child(13) ul li + li {
   margin-top: 1em;
 }
-article section:nth-child(14) ul li strong {
+article section:nth-child(13) ul li strong {
   font-size: 3.8em;
 }
-article section:nth-child(14) ul li:first-of-type strong {
+article section:nth-child(13) ul li:first-of-type strong {
   color: #F3659F;
 }
-article section:nth-child(14) ul li:nth-of-type(2) strong {
+article section:nth-child(13) ul li:nth-of-type(2) strong {
   color: #A965F3;
 }
-article section:nth-child(14) ul li:last-of-type strong {
+article section:nth-child(13) ul li:last-of-type strong {
   color: #53D9FF;
 }
 .extrainfo {
@@ -518,13 +516,13 @@ article section:nth-child(14) ul li:last-of-type strong {
 LAATSTE ITEMS ARTICLE
 *********************** */
 
-article section:nth-child(15) {
+article section:nth-child(14) {
   position: relative;
   z-index: 4;
   margin-top: 3em;
   margin-bottom: 3em;
 }
-article section:nth-child(15) h3 {
+article section:nth-child(14) h3 {
   font-size: 1.8em;
   margin-bottom: 0.7em; 
 }
@@ -533,13 +531,17 @@ article section:nth-child(15) h3 {
   bottom: 0;
   width: 100vw;
 }
-article section:nth-child(16) {
+article section:nth-child(15) {
   margin-bottom: 0;
 }
 
 /* ***********************
 TALEN CMM
 *********************** */
+main > section {
+   max-width: 72em;
+   margin: auto;
+}
 main section:nth-child(3) h3 {
   width: 100%;
   text-align: center;
@@ -651,7 +653,6 @@ main > section:nth-last-of-type(3) p {
   margin-bottom: 5%;
 }
 main > section:nth-last-of-type(3) a{
-  align-self: center;
   padding: 14px 0;
   width: 90%;
   text-align: center;
@@ -659,10 +660,13 @@ main > section:nth-last-of-type(3) a{
   color: #ffffff;
   font-weight: 600;
   margin: 0;
+  margin-left: 5%;
 }
 main > section:nth-last-of-type(3) a:first-of-type {
   background-color: #06c668;
   transition: 0.7s; 
+  display: block;
+  line-height: normal;
 }
 main > section:nth-last-of-type(3) a:first-of-type:hover {
   background-color: #49d390;
@@ -676,6 +680,7 @@ main > section:nth-last-of-type(3) a:last-of-type {
   transition: 0.7s; 
   margin-top: 1em;
   margin-bottom: 2em;
+  display: block;
 }
 main > section:nth-last-of-type(3) a:last-of-type:hover {
   border-color: rgba(51,51,51, 1);
@@ -821,6 +826,11 @@ Tablet
   header img + img {
     display: block;
   }
+  header > img {
+    width: 80em;
+    top: -40em;
+    left: 0;
+  }
   nav ul li span{
     display: inline-block;
     margin-left: 1em;
@@ -836,16 +846,19 @@ Tablet
 2nd navbar 
 *********************** */
   .none {
-    display: none; 
+    display: none;
   }
   .visible {
+    visibility: visible;
     display: flex;
     justify-content: center;
+    align-items: center;
     height: 3em;
     background-color: white;
     position: fixed;
     top: 0;
-    width: 100vw;
+    left: 0;
+    min-width: 100vw;
     z-index: 5;
     box-shadow: 0 1em 2em -1em rgba(158, 158, 158, .5);
     animation: slidedown .1s ease-in;
@@ -933,6 +946,7 @@ Tablet
   }
   h3 {
     font-size: 1.5em;
+    margin-top: 3em;
   }
   h4 {
     font-size: 1.65em;
@@ -952,9 +966,11 @@ Tablet
     margin-right: .5em;
     margin-left: 5%;
     line-height: 8em;
+    display: inline;
   }
   main > section:nth-last-of-type(3) a:last-of-type {
     padding: 0.875em 2.5em;
+    display: inline;
   }
   main > section:nth-last-of-type(2) ul {
     display: flex;
@@ -1001,6 +1017,175 @@ Tablet
 /* ***********************
 Desktop
 *********************** */
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 48em) {
+  header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-height: 40em;
+    margin: 0 auto;
+  }
+  header > section:first-of-type{
+    width: 50%;
+  }
+  header > section:first-of-type img {
+    width: 90%;
+  }
+  header > section:last-of-type {
+    display: block;
+    width: 50%;
+  }
+  header > section:last-of-type h1, header > section:last-of-type p{
+    margin-bottom: 1em;
+  }
+  header > section:last-of-type h2 + h2{
+    margin-bottom: .7em;
+  }
+  header > section:last-of-type a {
+    display: block; 
+  }
+  header > section:last-of-type a:first-of-type, header > section:last-of-type a:last-of-type{
+    width: 90%;
+    margin-left: 5%;
+  }
+  main > section:first-of-type{
+    text-align: center;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+    margin: 0 auto  ;
+  }
+  main > article {
+    position: relative;
+    top: -15em;
+    overflow-y: visible;
+    text-align: center;
+  }
+  .X, .color {
+    width: 190em;
+  }
+  article section:nth-child(3){
+     max-height: none;
+     margin: 0;
+     width: 100%;
+     margin-top: 20em
+  }
+  article section:nth-child(3) img:first-of-type {
+    width: 96vw;
+    max-width: 58.125em;
+  }
+  main article section:nth-child(6) {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 3%;
+  }
+  main article section:nth-child(6) > article {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+  article section:nth-child(10){
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 3em;
+  }
+  article section:nth-child(10) article {
+    width: 45%;
+    height: 26.333375em;
+  }
+  article section:nth-child(10) article:first-of-type {
+    margin: 0;
+  }
+  article section:nth-child(13) {
+    align-items: center;
+  }
+  article section:nth-child(13) ul {
+    display: flex;
+    flex-direction: row;
+    width: 94vw;
+    justify-content: space-between;
+    max-width: 70em;
+  }
+  article section:nth-child(13) ul li {
+    width: 30%
+  }
+  article section:nth-child(13) ul li + li {
+    margin: 0;
+  }
+  article section:nth-child(14) p {
+    margin: 0 auto;
+  }
+  article section:nth-child(14) h3 {
+    font-size: 2.1em;
+    width: 70%;
+    margin: 2em auto 1em auto;
+  }
+  main section:nth-child(3) h3 {
+    margin: 0 0 4em 0;
+  }
+  main > section:nth-last-of-type(5) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  main > section:nth-last-of-type(5) p {
+    text-align: center;
+  }
+  main > section:nth-last-of-type(5) article {
+    width: 40%;
+  }
+  main > section:nth-last-of-type(5) article:first-of-type {
+    margin-right: 5%;
+  }
+  main > section:nth-last-of-type(3) {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin: 0 auto;
+    background-color: #FAF9FE;
+    width: 70%;
+    max-width: 70em;
+  }
+  main > section:nth-last-of-type(3) article {
+    width: 50%;
+    margin: 3em 0 0 5%;
+  }
+  main > section:nth-last-of-type(3) h3 {
+    height: 2em;
+    margin: 0;
+    margin-left: 5%;
+  }
+  main > section:nth-last-of-type(3) h4 {
+    height: 2em;
+    margin: 0;
+    margin-left: 5%;
+  }
+  main > section:nth-last-of-type(3) div img {
+    position: initial;
+  }
+  main > section:nth-last-of-type(3) > div {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  main > section:nth-last-of-type(2) ul li:nth-of-type(1), main > section:nth-last-of-type(2) ul li:nth-of-type(2), main > section:nth-last-of-type(2) ul li:nth-of-type(3), main > section:nth-last-of-type(2) ul li:nth-of-type(4) {
+    margin: 2em 0;
+  }
+  main > section:nth-last-of-type(2) ul li:nth-of-type(1) {
+    margin-left: 1em;
+  }
+  main > section:nth-last-of-type(2) ul li:nth-of-type(4) {
+    margin-right: 1em;
+  }
+  main > section:last-of-type {
+    margin: 0 auto;
+    max-width: 40em;
+  }
+  main > section:last-of-type form {
 
+  }
 }
