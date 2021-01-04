@@ -22,6 +22,7 @@ De herhaling van wat specifiekere CSS materie heeft me goed gedaan.
 Zo merk ik dat ik veel makkelijker een animatie kan vertalen naar keyframes. 
 Ook heb ik toch nog wel aardig wat nieuwe technieken leren kennen. 
 Ik ken nu een stuk meer css Selectors uit mijn hoofd en ik kan nu makkelijk zonder classes specifieke elementen in mijn DOM aanroepen. 
+
 ** Dit ging niet goed:**
 Ik denk dat de keuze van de pagina niet helemaal slim is gemaakt. 
 De CleanMyMac X pagina is erg lang waardoor ik veel tijd kwijt was aan het vormgeven en responsive maken van de pagina. 
