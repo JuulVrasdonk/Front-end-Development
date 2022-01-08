@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3124" height="1968" viewBox="0 0 3124 1968">
+  <defs>
+    <radialGradient id="intro-bg-main2-a" cx="50.01%" cy="-33%" r="83.027%" fx="50.01%" fy="-33%" gradientTransform="matrix(0 1 -.62982 0 .292 -.83)">
+      <stop offset="0%" stop-color="#604564"/>
+      <stop offset="100%" stop-color="#392B44"/>
+    </radialGradient>
+  </defs>
+  <g fill="none" fill-rule="evenodd">
+    <rect width="3124" height="740" fill="#FFF"/>
+    <path fill="url(#intro-bg-main2-a)" fill-rule="nonzero" d="M-1.8189894e-12,0.453125 L778.135106,0.453125 C792.861822,0.453125 807.07421,5.86920439 818.066003,15.6700541 L1548.6897,667.13185 C1556.27459,673.89493 1567.72541,673.89493 1575.3103,667.13185 L2305.934,15.6700541 C2316.92579,5.86920439 2331.13818,0.453125 2345.86489,0.453125 L3124,0.453125 L3124,1968 L-1.8189894e-12,1968 L-1.8189894e-12,0.453125 Z"/>
+  </g>
+</svg>
